@@ -1,4 +1,4 @@
-$(function () {
+$(() => {
     let valeur1 = Array("Ils", "Elles", "Les humains", "Les Français", "Les Italiens", "Les Espagnols", "Les Robots");
 
     let valeur2 = Array("volent aussi bien que", "mangent autant de poissons que");
@@ -23,26 +23,25 @@ $(function () {
 
     let type = "phrase";
 
-    $('.generateur .champ .bouton').click(function () {
+    $('.generateur .champ .bouton').click(() => {
         creer_citation();
     })
 
-    $('.plus').click(function () {
-        if (nb_generation != 5) {
+    $('.plus').click(() => {if (nb_generation != 5) {
             nb_generation++;
         }
 
-        $('.total p').replaceWith('<p>' + nb_generation + '</p>');
+        $('.total p').replaceWith(`<p>${nb_generation}</p>`);
     })
 
-    $('.moins').click(function () {
+    $('.moins').click(() => {
         if (nb_generation != 1) {
             nb_generation--;
         }
-        $('.total p').replaceWith('<p>' + nb_generation + '</p>');
+        $('.total p').replaceWith(`<p>${nb_generation}</p>`);
     })
 
-    $('.suppr').click(function () {
+    $('.suppr').click(() => {
         vider_citation()
     })
 
@@ -91,7 +90,7 @@ $(function () {
             mot_valeur3 = mot_alea_valeur(valeur3);
         }
 
-        let texte = mot_valeur1 + " " + mot_valeur2 + " " + mot_valeur3.toLowerCase() + " " + mot_valeur4 + " " + mot_valeur5;
+        let texte = `${mot_valeur1} ${mot_valeur2} ${mot_valeur3.toLowerCase()} ${mot_valeur4} ${mot_valeur5}`;
         return texte;
     }
 
@@ -101,12 +100,12 @@ $(function () {
         let mot_valeur3 = mot_alea_valeur(valeur3);
         let mot_valeur4 = mot_alea_valeur(valeur4);
 
-        let question = mot_valeur1 + " " + mot_valeur2.toLowerCase() + " " + mot_valeur3 + " " + mot_valeur4;
+        let question = `${mot_valeur1} ${mot_valeur2.toLowerCase()} ${mot_valeur3} ${mot_valeur4}`;
         return question;
     }
 
     function creer_citation() {
-        for (var i = 0; i < nb_generation; i++) {
+        for (let i = 0; i < nb_generation; i++) {
             if ($('.generateur .citation_box').length == 0) {
                 $('.generateur').append('<div class=citation_box></div>');
 
@@ -114,12 +113,12 @@ $(function () {
             $('.generateur .champ').css('top', '10%');
             if (type == "phrase") {
                 let texte_alea = generation_texte(valeur1, valeur2, valeur3, valeur4, valeur5);
-                $('.generateur .citation_box').prepend('<div class=citation id="' + element_citation + '"><p>' + texte_alea + '</p></div>');
+                $('.generateur .citation_box').prepend(`<div class=citation id="${element_citation}"><p>${texte_alea}</p></div>`);
             }
 
             if (type == "question") {
                 let texte_alea = generation_question(valeur6, valeur3, valeur7, valeur8);
-                $('.generateur .citation_box').prepend('<div class=citation id="' + element_citation + '"><p>' + texte_alea + '</p></div>');
+                $('.generateur .citation_box').prepend(`<div class=citation id="${element_citation}"><p>${texte_alea}</p></div>`);
             }
 
             if (element_citation == 6) {
