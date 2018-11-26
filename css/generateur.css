@@ -1,0 +1,240 @@
+.generateur {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #040303;
+    overflow-y: auto;
+}
+
+.generateur .champ {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 15%;
+    background: #252525;
+    border-radius: 20px;
+    transition: top .7s;
+    max-width: 500px;
+    max-height: 200px;
+    min-height: 150px;
+}
+
+
+.generateur .champ .bouton {
+    position: relative;
+    margin: auto;
+    background: grey;
+    width: 90%;
+    height: 60%;
+    border-radius: 20px;
+    cursor: pointer;
+    top: 5%;
+}
+
+.generateur .champ .test {
+    position: absolute;
+    margin: auto;
+    background: grey;
+    width: 80%;
+    height: 20%;
+    border-radius: 20px;
+
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: height .7s;
+    display: flex;
+    justify-content: space-around;
+    color: #656565;
+}
+
+.generateur .champ .test h4 {
+    margin: auto 0;
+    position: relative;
+    background: white;
+    width: 7%;
+    height: 70%;
+    border-radius: 10px;
+    background: #b7b7b7;
+    cursor: pointer;
+}
+
+.generateur .champ .test h4 p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.generateur .champ .test .total {
+    position: relative;
+    display: block;
+    margin: auto -65px;
+    background: #b7b7b7;
+    height: 70%;
+    padding: 0 20px;
+    border-radius: 5px;
+}
+
+.generateur .champ .test .total p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.generateur .champ .test h3 {
+    position: relative;
+    display: flex;
+    margin: auto -30px;
+    background: #b7b7b7;
+    height: 70%;
+    padding: 0 10px;
+    border-radius: 5px;
+    font-weight: 200;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.generateur .champ .test h3 p {
+    margin: auto;
+}
+
+.generateur .champ .test h3.select {
+    color: white;
+}
+
+
+.invisible {
+    opacity: 1;
+}
+
+.generateur .champ .suppr {
+    margin: auto -10px;
+    position: relative;
+    display: block;
+    background: #ff4b4b;
+    height: 70%;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0 10px;
+
+}
+
+
+.generateur .champ .suppr:before {
+    display: block;
+    content: '+';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    font-size: 25px;
+    margin: auto;
+    color: white;
+    transition: transform .3s;
+
+}
+
+.generateur .champ .suppr:hover:before {
+    transform: translate(-50%, -50%) rotate(405deg);
+}
+
+.generateur .champ .bouton h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #d0d0d0;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+
+}
+
+.generateur .champ .bouton img {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    margin: auto;
+    width: 60%;
+    height: 60%;
+
+
+}
+
+.generateur .citation_box {
+    margin: auto;
+    margin-bottom: 150px;
+    position: absolute;
+    top: 25vh;
+    ;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: auto;
+    min-height: 100px;
+    max-width: 1400px;
+
+}
+
+.generateur .citation_box .citation {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: #252525;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    margin-top: 35px;
+    transition: margin-left 0.3s;
+}
+
+.generateur .citation_box .citation:hover {
+    margin-left: 20px;
+}
+
+.generateur .citation_box .citation:first-child {
+    margin-top: 0px;
+}
+
+.generateur .citation_box [id='1'] {
+    margin-top: 30px;
+    background: linear-gradient(to right, #FA4763 0%, #FA8881 100%);
+}
+
+.generateur .citation_box [id='2'] {
+    background: linear-gradient(to right, #5E7EF9 0%, #2BC5F9 100%);
+}
+
+.generateur .citation_box [id='3'] {
+    background: linear-gradient(to right, #F26929 0%, #F6C95B 100%);
+}
+
+.generateur .citation_box [id='4'] {
+    background: linear-gradient(to right, #7074F8 0%, #EF79E8 100%);
+}
+
+.generateur .citation_box [id='5'] {
+    background: linear-gradient(to right, #3FD893 0%, #3AAFAD 100%);
+}
+
+.generateur .citation_box [id='6'] {
+    background: linear-gradient(to right, #EC8934 0%, #D6D330 100%);
+}
+
+.generateur .citation_box .citation p {
+    margin: auto;
+    padding: 35px 20px;
+    color: #252525;
+    font-size: 20px;
+    text-align: justify;
+    font-weight: 700;
+}
