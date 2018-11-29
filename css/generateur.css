@@ -238,3 +238,13 @@
     text-align: justify;
     font-weight: 700;
 }
+
+.separateur {
+    background: grey;
+    height: 5px;
+    width: 80%;
+    margin: auto;
+    border-radius: 10px;
+    margin-bottom: 65px;
+    margin-top: 85px;
+}

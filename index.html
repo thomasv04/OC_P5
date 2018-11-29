@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-    <head>
+<head>
     <meta charset="UTF-8">
     <title>Générateur de citation</title>
     <link rel="stylesheet" href="css/generateur.css">
@@ -15,7 +15,12 @@
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/tableau.js"></script>
     <script src="js/generateur.js"></script>
+    <script>
+        let generateur_citation = new Generateur();
+        generateur_citation.init('.generateur', citation);
+    </script>
 </body>
 
 </html>
